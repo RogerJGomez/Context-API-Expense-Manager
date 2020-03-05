@@ -20,14 +20,6 @@ code {
   align-items: center;
 }
 
-li {
-  list-style-type: none;
-  padding: 1vh;
-  margin: 2vh;
-  border-radius: 10x;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
-
 
 
 input[type='text'],
@@ -36,7 +28,7 @@ input[type='number'] {
   border-radius: 2px;
   display: block;
   font-size: 16px;
-  padding: 10px;
+  padding: 10px 0;
   width: 100%;
 }
 
@@ -61,11 +53,22 @@ input[type='number'] {
 .list {
   padding: 0;
 }
-
+.list li span{
+  padding: 0 1vh;
+} 
 .list li{
-  width: 100%;
   margin: 2vh auto;
   background: #fff;
+  list-style-type: none;
+  padding: 1vh;
+  margin: 2vh;
+  display: flex;
+  align-self: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  border-radius: 10x;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .list .plus {
@@ -103,12 +106,14 @@ input[type='number'] {
 h1 {
   letter-spacing: 1px;
   margin: 0;
+  text-transform: uppercase;
 }
 
 h3 {
   border-bottom: 1px solid #bbb;
   padding-bottom: 10px;
   margin: 40px 0 10px;
+  text-transform: uppercase;
 }
 
 h4 {
