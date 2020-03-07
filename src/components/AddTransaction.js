@@ -1,5 +1,18 @@
 import React, { useContext, useState } from 'react'
 import { GlobalContext } from '../context/GlobalState'
+import CustomAlert from 'sweetalert2'
+
+const Toast = CustomAlert.mixin({
+    toast: true,
+    position: 'center-end',
+    showConfirmButton: false,
+    timer: 2500,
+    timerProgressBar: true,
+    onOpen: (toast) => {
+      toast.addEventListener('mouseenter', CustomAlert.stopTimer)
+      toast.addEventListener('mouseleave', CustomAlert.resumeTimer)
+    }
+  })
 
 export const AddTransaction = () => {
 
@@ -11,7 +24,10 @@ export const AddTransaction = () => {
     const onSubmit = e =>{
         e.preventDefault()
         if(text===""){
-            alert('Transaction name empty')
+              Toast.fire({
+                icon: 'error',
+                title: 'You must type at least 1 character'
+            })
         }
         else{
             const newTransaction = {
@@ -21,6 +37,10 @@ export const AddTransaction = () => {
             }
 
             addTransaction(newTransaction)
+            Toast.fire({
+                icon: 'success',
+                title: "Transaction added"
+            })
             setText('')
             setAmount('')
         }
