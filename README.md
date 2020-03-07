@@ -13,3 +13,7 @@ To install all the dependencies
 ### `npm start`
 
 To run the project in localhost:3000
+
+### `Technologies`
+
+*Context API
