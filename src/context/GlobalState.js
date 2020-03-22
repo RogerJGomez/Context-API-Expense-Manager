@@ -14,12 +14,7 @@ var initialState = {
 
 export const GlobalContext = createContext(initialState)
 
-const localState = JSON.parse(localStorage.getItem("transactions"))
 //Provider Component
-
-console.log(localState)
-console.log(initialState)
-
 export const GlobalProvider = ({ children }) =>{
 
     const [state, dispatch] = useReducer(AppReducer, initialState, () => {
