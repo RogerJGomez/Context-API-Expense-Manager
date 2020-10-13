@@ -13,14 +13,12 @@ code {
     monospace;
 }
 
-.App{
+.App {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
-
 
 input[type='text'],
 input[type='number'] {
@@ -31,7 +29,6 @@ input[type='number'] {
   padding: 10px 0;
   width: 100%;
 }
-
 
 .btn {
   cursor: pointer;
@@ -53,10 +50,10 @@ input[type='number'] {
 .list {
   padding: 0;
 }
-.list li span{
+.list li span {
   padding: 0 1vh;
-} 
-.list li{
+}
+.list li {
   margin: 2vh auto;
   background: #fff;
   list-style-type: none;
@@ -95,8 +92,6 @@ input[type='number'] {
 .list li:hover .delete-btn {
   opacity: 1;
 }
-
-
 
 .container {
   margin: 30px auto;

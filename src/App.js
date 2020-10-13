@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { Header } from './components/Header'
 import { Balance } from './components/Balance'
 import { IncomeExpenses } from './components/IncomeExpenses'
@@ -9,9 +9,9 @@ import { GlobalProvider } from './context/GlobalState'
 function App() {
   return (
     <GlobalProvider>
-      <div className="App">
+      <div className='App'>
         <Header />
-        <div className="container">
+        <div className='container'>
           <Balance />
           <IncomeExpenses />
           <TransactionList />
@@ -22,4 +22,4 @@ function App() {
   )
 }
 
-export default App;
+export default App
